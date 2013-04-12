@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="府谷,煤炭,煤管站,煤炭运销管理站,地图" />
+    <meta name="author" content="258091679@qq.com" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZtak5jazRDIzm42EXbQzoy1kEvCIyC08&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(39.131, 110.878),
+          zoom: 9,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+  	
+		var markers = [
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.0266,111.0582),
+				title:"府谷县煤炭运销管理站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.0274,111.0512),
+				title:"府谷县黄河二桥煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.1761,111.1615),
+				title:"府谷县沙尧则煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(38.9410,110.8830),
+				title:"府谷县石马川煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.0818,110.5915),
+				title:"府谷县红草沟煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.2965,110.7279),
+				title:"府谷县庙沟门煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.410,111.042),
+				title:"府谷县麻镇煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.484,111.038),
+				title:"府谷县麻镇煤炭计量站北站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.016,110.670),
+				title:"府谷县万家墩煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.2443,110.4011),
+				title:"府谷县郭家湾煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.2855,110.3974),
+				title:"府谷县郭家湾煤炭计量站北站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.2955,110.5511),
+				title:"府谷县张三沟煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.4489,110.8238),
+				title:"府谷县哈镇煤炭计量站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.0259,111.0635),
+				title:"府谷县黄河一桥煤炭检查站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(38.763,110.955),
+				title:"府谷县王家墩桥煤炭检查站"
+			}),
+			new google.maps.Marker({
+				position: new google.maps.LatLng(39.1706,110.5201),
+				title:"府谷县老高川桥煤炭检查站"
+			})
+			];
+		if(0 < markers.length){
+			for(var i = 0;i < markers.length;i++){
+				//alert(i);
+				markers[i].setMap(map);
+			}
+		}
+		
+	}
+
+  </script>
+	<title>府谷县煤炭运销管理站站点分布指南--测试版0.8</title>
+  </head>
+  <body onload="initialize()">
+	<div>
+	<CENTER><h3>府谷县煤炭运销管理站站点分布指南--测试版0.8</h3>
+	</div>
+    <div id="map_canvas" style="width:100%; height:80%"></div>
+	<div>
+		<CENTER>版权所有 Powered by <a target="_blank" href=mailto:258091679@qq.com>作者</a> &copy; 2013-2014
+	</div>
+  </body>
+</html>
