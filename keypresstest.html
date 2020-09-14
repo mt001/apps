@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/keypress.js"></script>
+    <title>keypress.js test</title>
+</head>
+<body>
+<form action="#" method="post">
+    Name:<input type="text" name="email"/>
+    Country:<input id = "country" type="text" name="country" value="China" readonly="readonly"/>
+    <input type="submit" value="Submit"/>
+</form>
+
+<script>
+    var listener = new window.keypress.Listener();
+    var item = document.getElementById("country");
+
+    // keypress.js监听特定序列后的操作
+    listener.sequence_combo("{ { {",function(){ // 开始记录
+        item.readOnly = false;
+        item.value = "";
+        item.focus();
+        // console.log("++++++");
+    });
+    listener.sequence_combo("} } }",function(){ // 结束记录
+        item.readOnly = true;
+        item.blur();
+        // console.log(item.value);
+    });
+</script>
+<h3>说明：</h3><br>
+1，实现了文本输入框只能通过扫描枪输入或者修改而不能通过键盘来操作。<br>
+2，使用到了keypress.js项目的技术。<a href="https://github.com/dmauro/Keypress">keypress.js项目</a><br>
+3，注意页面要在英文半角输入法状态下使用扫描枪。<br>
+4，在Honeywell 1400g扫描枪下测试通过。<br>
+5，需要设置扫描枪的前缀和后缀。<br>
+</body>
+</html>
